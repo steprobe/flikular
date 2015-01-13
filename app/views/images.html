@@ -1,5 +1,23 @@
-<h2>I be images</h2>
+<h2
+    ng-init='
+        searchParams.tag="";
+        current_image_url="";
+        ' />
+Flickr Image Search</h2>
 
-<span class="glyphicon glyphicon-chevron-left"></span>
-<image src="http://img2.wikia.nocookie.net/__cb20111108171128/scratchpad/images/2/2d/SPONGEBOB!!!!.jpg" />
-<span class="glyphicon glyphicon-chevron-right"></span>
+Filter by Tag: <input type="text" ng-model="searchParams.tag" />
+
+<br />
+<button ng-click="searchByTag()" >Search</button>
+
+<br /><br />
+
+<p>Found {{ picture_urls.length }} pictures </p>
+
+<div ng-show="haveImages()" class="loading style-2">
+
+    <span class="glyphicon glyphicon-chevron-left has-feedback" ng-click="moveBack()"></span>
+    <image algin="center" src="{{ current_image_url }}" />
+    <span class="glyphicon glyphicon-chevron-right" ng-click="moveForward()"></span>
+
+</div>
