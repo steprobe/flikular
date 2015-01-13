@@ -14,7 +14,7 @@ Filter by Tag: <input type="text" ng-model="searchParams.tag" />
 
 <p>Found {{ picture_urls.length }} pictures </p>
 
-<div ng-show="haveImages()" class="loading style-2">
+<div ng-show="haveImages()">
 
     <span class="glyphicon glyphicon-chevron-left has-feedback" ng-click="moveBack()"></span>
     <image algin="center" src="{{ current_image_url }}" />
