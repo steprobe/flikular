@@ -1,11 +1,9 @@
-<div class="leftmargin"
-     ng-init='
-        searchParams.tag="";
-        current_image_url="";'>
+<div class="leftmargin">
 
     <h2>Filkular: Flickr Image Search</h2>
     <p>Filter by Tag:</p>
-    <input type="text" ng-model="searchParams.tag" />
+
+    <input type="text" ng-model="tag" />
     <button ng-click="searchByTag()" >Search</button>
 
     <br /><br />

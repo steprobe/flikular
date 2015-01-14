@@ -17,6 +17,16 @@
             });
         };
 
+        factory.photosToUrls = function(photos) {
+            return photos.map(function (photo) {
+                    return "http://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg"
+                        .replace("{farm-id}", photo.farm)
+                        .replace("{server-id}", photo.server)
+                        .replace("{id}", photo.id)
+                        .replace("{secret}", photo.secret);
+                });
+        }
+
         return factory;
     };
 
