@@ -1,23 +1,24 @@
-<h2
-    ng-init='
+<div class="leftmargin"
+     ng-init='
         searchParams.tag="";
-        current_image_url="";
-        ' />
-Filkular: Flickr Image Search</h2>
+        current_image_url="";'>
 
-Filter by Tag: <input type="text" ng-model="searchParams.tag" />
+    <h2>Filkular: Flickr Image Search</h2>
+    <p>Filter by Tag:</p>
+    <input type="text" ng-model="searchParams.tag" />
+    <button ng-click="searchByTag()" >Search</button>
 
-<br />
-<button ng-click="searchByTag()" >Search</button>
+    <br /><br />
 
-<br /><br />
+    <div ng-show="haveImages()">
 
-<p>Found {{ picture_urls.length }} pictures </p>
+        <span class="glyphicon glyphicon-chevron-left has-feedback" ng-click="moveBack()"></span>
+        <image algin="center" src="{{ current_image_url }}" />
+        <span class="glyphicon glyphicon-chevron-right" ng-click="moveForward()"></span>
 
-<div ng-show="haveImages()">
+    </div>
 
-    <span class="glyphicon glyphicon-chevron-left has-feedback" ng-click="moveBack()"></span>
-    <image algin="center" src="{{ current_image_url }}" />
-    <span class="glyphicon glyphicon-chevron-right" ng-click="moveForward()"></span>
+    <br />
+    <p>Found {{ picture_urls.length }} pictures </p>
 
 </div>
