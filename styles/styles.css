@@ -2,3 +2,12 @@
     position: relative;
     left: 50px;
 }
+
+h1, h2, p {
+  font-family: 'futura-pt';
+}
+
+@font-face {
+  font-family: 'futura-pt';
+  src: url('fonts/futura-pt.ttf');
+}
